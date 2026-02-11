@@ -7,8 +7,10 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <Hero />
-      <KeyFeature />
+      <main style={{ paddingTop: 70 }}>
+        <Hero />
+        <KeyFeature />
+      </main>
     </div>
   );
 }
