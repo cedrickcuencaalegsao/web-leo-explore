@@ -16,16 +16,14 @@ export default function Hero() {
             <span>Your Next Gen File Manager</span>
           </h1>
 
-          <h2 className="hero-subtitle">Blazing fast, Secure and intuitive.</h2>
-
           <p className="hero-description">
-            Build with <em>Tauri2.0 (Rust and Typescript)</em> for peak
+            Blazing fast, Secure and intuitive. Build with <em>Tauri2.0 (Rust and Typescript)</em> for peak
             performance and security.
           </p>
 
           <div className="hero-actions">
             <button className="btn-primary">Download Free Trial</button>
-            <button className="btn-outline">Lear More</button>
+            <button className="btn-outline">Learn More</button>
           </div>
 
           <p className="hero-footer-note">
