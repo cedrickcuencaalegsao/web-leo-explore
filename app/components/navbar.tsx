@@ -5,31 +5,15 @@ import "./navbar.css";
 
 const SCROLL_DURATION_MS = 1500;
 
-function smoothScrollTo(element: HTMLElement | null) {
-  if (!element) return;
-  const start = window.scrollY;
-  const target = element.getBoundingClientRect().top + start;
-  const distance = target - start;
-  const startTime = performance.now();
-
-  function step(currentTime: number) {
-    const elapsed = currentTime - startTime;
-    const progress = Math.min(elapsed / SCROLL_DURATION_MS, 1);
-    const eased = 1 - (1 - progress) ** 2;
-    window.scrollTo(0, start + distance * eased);
-    if (progress < 1) requestAnimationFrame(step);
-  }
-  requestAnimationFrame(step);
-}
 
 function scrollToHero(e: React.MouseEvent<HTMLAnchorElement>) {
   e.preventDefault();
-  smoothScrollTo(document.getElementById("home"));
+  document.getElementById("home")?.scrollIntoView({ behavior: "smooth" });
 }
 
 function scrollToFeatures(e: React.MouseEvent<HTMLAnchorElement>) {
   e.preventDefault();
-  smoothScrollTo(document.getElementById("features"));
+  document.getElementById("features")?.scrollIntoView({ behavior: "smooth" });
 }
 
 export default function Navbar() {

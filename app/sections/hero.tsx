@@ -1,12 +1,16 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
+import AnimatedSection from "../components/AnimatedSection";
 import "./hero.css";
 
 export default function Hero() {
   return (
     <section className="hero-wrapper" id="home">
       <div className="hero-container">
-        <div className="hero-content">
+        <AnimatedSection className="hero-content" threshold={0.08}>
+          <div className="hero-content-inner">
           <h1 className="hero-title">
             Leo Explorer:
             <span>Your Next Gen File Manager</span>
@@ -28,10 +32,11 @@ export default function Hero() {
             Available on Windows, macOS, and Linux | No Credit Card Required for
             Free Trial
           </p>
-        </div>
+          </div>
+        </AnimatedSection>
 
         {/* This wrapper now handles the negative margin/overlap */}
-        <div className="hero-image-wrapper">
+        <AnimatedSection className="hero-image-wrapper" delay={120} threshold={0.08}>
           <Image
             src="/images/screenshot.png"
             alt="Leo Explorer Interface"
@@ -40,7 +45,7 @@ export default function Hero() {
             className="hero-img"
             priority
           />
-        </div>
+        </AnimatedSection>
       </div>
     </section>
   );

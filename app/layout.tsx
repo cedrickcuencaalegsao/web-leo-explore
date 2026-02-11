@@ -7,6 +7,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Leo Explorer",
   description: "Thesis project of CS student @ AMA College Learning Center",
+  icons: {
+    icon: "/icons/app-icon.png",
+  },
 };
 
 export default function RootLayout({

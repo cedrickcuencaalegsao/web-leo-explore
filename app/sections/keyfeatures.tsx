@@ -1,14 +1,17 @@
+"use client";
+
 import React from 'react';
 import { Timer, BrainCircuit, Zap, FolderSearch } from 'lucide-react';
+import AnimatedSection from '../components/AnimatedSection';
 import './keyfeature.css';
 
-const KeyFeature: React.FC = () => {
+export default function KeyFeature ()  {
   return (
     <div className="key-feature-wrapper" id="features">
       <div className="key-feature-container">
         
         {/* Left Side: Branding and Messaging */}
-        <div className="key-feature-content-left">
+        <AnimatedSection className="key-feature-content-left" delay={0}>
           <h1 className="key-feature-main-title">Tired of Clutterd Desktop?</h1>
           <h2 className="key-feature-sub-title">Rediscover KeyFeature.</h2>
           
@@ -29,10 +32,10 @@ const KeyFeature: React.FC = () => {
               A desktop experience designed for peak performance and effortless KeyFeature.
             </p>
           </div>
-        </div>
+        </AnimatedSection>
 
         {/* Right Side: Feature Cards */}
-        <div className="key-feature-grid-right">
+        <AnimatedSection className="key-feature-grid-right" delay={80}>
           
           {/* Card 1 */}
           <div className="key-feature-card">
@@ -78,10 +81,8 @@ const KeyFeature: React.FC = () => {
             <button className="key-feature-btn">Learn More</button>
           </div>
 
-        </div>
+        </AnimatedSection>
       </div>
     </div>
   );
 };
-
-export default KeyFeature;
