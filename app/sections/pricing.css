@@ -1,0 +1,233 @@
+.pricing-wrapper {
+    background-color: #e2e2e2;
+    min-height: 100vh;
+    padding: 60px 20px;
+    font-family: 'Inter', -apple-system, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .pricing-container {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Header Styles */
+  .pricing-header h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: #000;
+  }
+  
+  .pricing-header h1 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #5200b3; /* Vibrant Purple */
+    margin-bottom: 24px;
+  }
+  
+  .trust-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .dot-separator {
+    width: 6px;
+    height: 6px;
+    background-color: #999;
+    border-radius: 50%;
+  }
+  
+  /* Grid Layout */
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    align-items: stretch;
+  }
+
+  .pricing-card-wrap {
+    min-height: 0;
+    display: flex;
+  }
+
+  .pricing-card-wrap .pricing-card {
+    flex: 1;
+  }
+  
+  /* Card Base Styles */
+  .pricing-card {
+    background: white;
+    border-radius: 24px;
+    padding: 30px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    position: relative;
+  }
+  
+  .pricing-card.highlighted {
+    background: linear-gradient(180deg, #7209b7 30%, #560bad 50%, #3a0ca3 100%);
+    color: white;
+  }
+  
+  /* Icon & Labels */
+  .card-icon-box {
+    background: #f0f0f0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .highlighted .card-icon-box {
+    background: #3A0CA3;
+    color: white;
+  }
+  
+  .card-name {
+    color: #000000;
+    font-size: 28px;
+    font-weight: 800;
+    margin: 0;
+  }
+  /* Non-highlighted cards: card name stays black */
+  .pricing-card:not(.highlighted) .card-name {
+    color: #000000;
+  }
+  .pricing-card.highlighted .card-name {
+    color: white;
+  }
+  .highlighted-text {
+    color: white;
+  }
+  
+  .card-subtitle {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+  }
+  
+  .highlighted .card-subtitle {
+    color: rgba(255,255,255,0.8);
+  }
+  
+  /* Pricing */
+  .price-main {
+    font-size: 32px;
+    font-weight: 800;
+    margin: 0;
+  }
+  
+  .pricing-card:not(.highlighted) .price-main {
+    color: #000000;
+  }
+  
+  .pricing-card.highlighted .price-main {
+    color: white;
+  }
+  
+  .price-strike {
+    font-size: 16px;
+    color: #999;
+    text-decoration: line-through;
+    margin-bottom: 25px;
+    display: block;
+  }
+  
+  .pricing-card:not(.highlighted) .price-strike {
+    color: #999;
+  }
+  
+  .pricing-card.highlighted .price-strike {
+    color: rgba(255,255,255,0.5);
+  }
+  
+  /* Button */
+  .card-btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    background-color: #3a0080;
+    color: white;
+    transition: opacity 0.2s;
+  }
+  
+  .card-btn:hover {
+    opacity: 0.9;
+  }
+  
+  /* Feature List */
+  .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #444;
+  }
+  
+  .highlighted .feature-item {
+    color: white;
+  }
+  
+  .feature-item.disabled {
+    color: #aaa;
+  }
+  
+  /* Recommended Badge */
+  .recommended-badge {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: white;
+    color: #5200b3;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 4px 12px;
+    border-radius: 6px;
+    text-transform: uppercase;
+  }
+  
+  /* Responsive */
+  @media (max-width: 1100px) {
+    .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .pricing-grid { grid-template-columns: 1fr; }
+    .trust-bar { flex-direction: column; gap: 10px; }
+    .dot-separator { display: none; }
+  }

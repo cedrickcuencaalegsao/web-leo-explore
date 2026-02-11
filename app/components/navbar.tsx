@@ -16,6 +16,11 @@ function scrollToFeatures(e: React.MouseEvent<HTMLAnchorElement>) {
   document.getElementById("features")?.scrollIntoView({ behavior: "smooth" });
 }
 
+function scrollToPricing(e: React.MouseEvent<HTMLAnchorElement>) {
+  e.preventDefault();
+  document.getElementById("pricing")?.scrollIntoView({ behavior: "smooth" });
+}
+
 export default function Navbar() {
   return (
     <header className="navbar-wrapper">
@@ -37,7 +42,7 @@ export default function Navbar() {
             Home
           </a>
           <a href="#features" onClick={scrollToFeatures}>Features</a>
-          <a href="#">Pricing</a>
+          <a href="#pricing" onClick={scrollToPricing}>Pricing</a>
           <a href="#">Reviews</a>
           <a href="#">Download</a>
           <a href="#">Developers</a>
