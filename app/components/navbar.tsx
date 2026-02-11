@@ -1,12 +1,18 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import "./navbar.css";
+
+function scrollToHero(e: React.MouseEvent<HTMLAnchorElement>) {
+  e.preventDefault();
+  document.getElementById("home")?.scrollIntoView({ behavior: "smooth" });
+}
 
 export default function Navbar() {
   return (
     <header className="navbar-wrapper">
       <div className="navbar-container">
-        <div className="logo-section">
+        <a className="logo-section" href="#home" onClick={scrollToHero}>
           <Image
             src="/icons/app-icon.png"
             alt="Leo Explorer Logo"
@@ -16,10 +22,10 @@ export default function Navbar() {
             priority
           />
           <span className="logo-text">Leo Explorer</span>
-        </div>
+        </a>
 
         <nav className="nav-links">
-          <a href="#">Home</a>
+          <a href="#home" onClick={scrollToHero}>Home</a>
           <a href="#">Features</a>
           <a href="#">Pricing</a>
           <a href="#">Reviews</a>
