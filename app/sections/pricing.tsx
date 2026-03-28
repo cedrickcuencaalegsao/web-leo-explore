@@ -47,7 +47,7 @@ export default function PricingSection ()  {
             <p className="card-subtitle">For daily users.</p>
             <p className="price-main">$0.00/month</p>
             <span className="price-strike">$0.00/month</span>
-            <button className="card-btn">Activate Free Tier</button>
+            <button className="card-btn">Create Free Account</button>
             <ul className="feature-list">
               <li className="feature-item"><Monitor size={16}/> 1 Devices</li>
               <li className="feature-item disabled"><XCircle size={16}/> No Access to pro feature</li>
